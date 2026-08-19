@@ -70,7 +70,7 @@ Media URLs live in [`content/assets.ts`](content/assets.ts) so licensed or place
 3. Add a component under `components/marketing`
 4. Switch on `section.type` in `homepage-sections.tsx`
 
-Inner routes are stubs generated from [`content/navigation.ts`](content/navigation.ts) so the chrome can be exercised without rebuilding every Drupal page.
+Inner routes that are not yet migrated are stubs generated from [`content/navigation.ts`](content/navigation.ts) (`stubTitles`). Migrated inner pages are typed modules in [`content/dredging.ts`](content/dredging.ts) (and later market files), registered in [`content/pages.ts`](content/pages.ts), and rendered by [`MarketPage`](components/proposal/market-page.tsx) / [`ArticlePage`](components/proposal/article-page.tsx) — still in proposal chrome, not Drupal clones. Track progress in [`MIGRATION.md`](MIGRATION.md).
 
 ## Stack notes
 

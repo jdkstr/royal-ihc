@@ -9,6 +9,88 @@ export type Cta = {
   href: string
 }
 
+export type SpecChipData = {
+  label: string
+  value: string
+  title: string
+  text: string
+}
+
+export type ProductCanvasData = {
+  image: string
+  title: string
+  caption: string
+  href: string
+  specs: readonly SpecChipData[]
+}
+
+export type LinkCard = {
+  kicker?: string
+  title: string
+  text: string
+  href: string
+  image?: string
+}
+
+export type MarketPageContent = {
+  path: string
+  title: string
+  description: string
+  kicker: string
+  headline: string
+  intro: string
+  canvas: ProductCanvasData
+  offerings: LinkCard[]
+  explain: {
+    title: string
+    text: string
+    cta: Cta
+  }
+  challenges: LinkCard[]
+  featuredCase: LinkCard & { image: string }
+  projects: {
+    title: string
+    intro: string
+    items: LinkCard[]
+    cta: Cta
+  }
+  about: {
+    title: string
+    paragraphs: string[]
+    links: Cta[]
+  }
+  news: { date: string; title: string; href: string }[]
+  close: {
+    headline: string
+    text: string
+    cta: Cta
+  }
+}
+
+export type ArticleSection = {
+  title?: string
+  paragraphs: string[]
+  items?: { title?: string; text: string }[]
+}
+
+export type ArticlePageContent = {
+  path: string
+  title: string
+  description: string
+  kicker: string
+  headline: string
+  intro: string
+  image?: string
+  sections: ArticleSection[]
+  cards?: LinkCard[]
+  links?: Cta[]
+  close: {
+    headline: string
+    text: string
+    cta: Cta
+  }
+}
+
 export type HeroSection = {
   type: "hero"
   headline: string
