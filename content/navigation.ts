@@ -122,4 +122,7 @@ export const stubTitles: Record<string, string> = {
     "Integrated and connected automation",
   "/offshore-energy/offshore-cases/pipelaying-vessels-sapura":
     "Pipelaying vessels for Sapura",
+  "/offshore-energy/offshore-vessels": "Offshore vessels",
+  "/offshore-energy/offshore-equipment": "Offshore equipment",
+  "/offshore-energy/offshore-services": "Offshore services",
 }
