@@ -91,6 +91,32 @@ export type ArticlePageContent = {
   }
 }
 
+export type ListingItem = {
+  date?: string
+  kicker?: string
+  title: string
+  text?: string
+  href: string
+  image?: string
+}
+
+export type ListingPageContent = {
+  path: string
+  title: string
+  description: string
+  kicker: string
+  headline: string
+  intro: string
+  items: ListingItem[]
+  note?: string
+  links?: Cta[]
+  close: {
+    headline: string
+    text: string
+    cta: Cta
+  }
+}
+
 export type HeroSection = {
   type: "hero"
   headline: string
