@@ -8,9 +8,13 @@ Standing PR: `dev` → `main`
 
 ## Last run
 
-- **When:** 2026-08-19T22:38Z (cron worker)
-- **What:** Enabled GitHub Pages deploys from `dev`. Migrated `/dredging`, `/dredging/what-is-dredging`, and `/dredging/dredging-vessels` from the live site into proposal chrome. Added typed `MarketPage` / `ArticlePage` modules so later markets reuse the same layout. Linked dredging children that are not yet migrated as stubs. First `dev` Pages **build succeeded**; **deploy failed** because environment `github-pages` only allows `main`. Workflow now uses a per-branch environment (`pages-dev` / `pages-main`). Follow-up `dev` deploy **succeeded** (Actions run 32310389574). `/dredging` is live on Pages. Could not open the standing `dev` → `main` pull request from this run (GitHub PR create is not available to the worker token). Reuse or create that PR next run if it is still missing.
-- **Skipped implementation?** No. Latest `dev`/`main` commit was ~8 minutes old but Pages CI on `main` had already succeeded; no in-flight `dev` workflow; no open agent PRs; migration not marked complete.
+- **When:** 2026-08-19T23:00Z (cron worker)
+- **What:** Migrated `/offshore-energy` (IHC Offshore Energy market hub) and `/offshore-energy/offshore-cases/pipelaying-vessels-sapura` (Sapura pipelay case) from the live site into proposal chrome, reusing the typed `MarketPage` / `ArticlePage` modules. Added `content/offshore-energy.ts`, registered both in `content/pages.ts`, and stubbed the offshore `offshore-vessels` / `offshore-equipment` / `offshore-services` children so hub links resolve on static export. `npm run lint` clean; `GITHUB_PAGES=true npm run build` exports 50 static pages. Opened/updated the standing `dev` → `main` PR.
+- **Skipped implementation?** No. Latest `dev` commit (`4a9f94d`) was ~10 min old but its Pages CI had already **succeeded**; no in-flight `dev` workflow; no open agent PRs; migration not marked complete.
+
+### Prior run (2026-08-19T22:38Z)
+
+- Enabled GitHub Pages deploys from `dev` (per-branch environment `pages-dev` / `pages-main`). Migrated `/dredging`, `/dredging/what-is-dredging`, `/dredging/dredging-vessels`. Added the `MarketPage` / `ArticlePage` architecture. `/dredging` live on Pages.
 
 ## GitHub Pages
 
@@ -30,16 +34,18 @@ Standing PR: `dev` → `main`
 | `/dredging` | IHC Dredging hub |
 | `/dredging/what-is-dredging` | Explainer |
 | `/dredging/dredging-vessels` | Vessel families |
+| `/offshore-energy` | IHC Offshore Energy hub |
+| `/offshore-energy/offshore-cases/pipelaying-vessels-sapura` | Sapura pipelay case |
 
 ## In progress
 
 - Dredging children linked from the hub (equipment, services, cases, challenges, innovations, history, project types)
+- Offshore children linked from the hub (offshore-vessels, offshore-equipment, offshore-services)
 
 ## Remaining (stubs or missing)
 
 ### Primary nav (priority 1)
 
-- `/offshore-energy`
 - `/mining`
 - `/defence`
 - `/challenges`
@@ -69,7 +75,7 @@ Standing PR: `dev` → `main`
 ### Featured cases (priority 4)
 
 - `/dredging/dredging-cases/worlds-most-powerful-cutter-suction-dredger`
-- `/offshore-energy/offshore-cases/pipelaying-vessels-sapura`
+- `/offshore-energy/offshore-cases/pipelaying-vessels-sapura` ✅ done
 
 ### Dredging children now stubbed because the hub links to them
 
@@ -122,7 +128,8 @@ Sitemap (2026-08-19) lists **703** URLs. Rough counts by first segment:
 
 ## Next run
 
-1. `/offshore-energy` (next primary-nav market), or
-2. Remaining dredging hub children (`/dredging/dredging-equipment`, `/dredging/dredging-services`) if staying in that market.
+1. `/mining` (next primary-nav market), or
+2. `/defence` (remaining primary-nav market), or
+3. Offshore hub children (`/offshore-energy/offshore-vessels`, `/offshore-energy/offshore-equipment`, `/offshore-energy/offshore-services`) if staying in that market.
 
 Migration is **not complete**.
