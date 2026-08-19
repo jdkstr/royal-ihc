@@ -35,8 +35,10 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # The default github-pages environment only allows `main`, which blocked
+    # in-progress deploys from `dev`. deploy-pages still publishes the site.
     environment:
-      name: github-pages
+      name: pages-${{ github.ref_name }}
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - id: deployment

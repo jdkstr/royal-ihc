@@ -9,7 +9,7 @@ Standing PR: `dev` → `main`
 ## Last run
 
 - **When:** 2026-08-19T22:38Z (cron worker)
-- **What:** Enabled GitHub Pages deploys from `dev`. Migrated `/dredging`, `/dredging/what-is-dredging`, and `/dredging/dredging-vessels` from the live site into proposal chrome. Added typed `MarketPage` / `ArticlePage` modules so later markets reuse the same layout. Linked dredging children that are not yet migrated as stubs.
+- **What:** Enabled GitHub Pages deploys from `dev`. Migrated `/dredging`, `/dredging/what-is-dredging`, and `/dredging/dredging-vessels` from the live site into proposal chrome. Added typed `MarketPage` / `ArticlePage` modules so later markets reuse the same layout. Linked dredging children that are not yet migrated as stubs. First `dev` Pages **build succeeded**; **deploy failed** because environment `github-pages` only allows `main`. Workflow now uses a per-branch environment (`pages-dev` / `pages-main`) so `dev` can publish. The API cannot add `dev` to the `github-pages` branch policy (403).
 - **Skipped implementation?** No. Latest `dev`/`main` commit was ~8 minutes old but Pages CI on `main` had already succeeded; no in-flight `dev` workflow; no open agent PRs; migration not marked complete.
 
 ## GitHub Pages
