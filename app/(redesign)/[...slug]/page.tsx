@@ -5,11 +5,13 @@ import { notFound } from "next/navigation"
 import { buttonVariants } from "@/components/ui/button"
 import { Container } from "@/components/marketing/container"
 import { ArticlePage } from "@/components/proposal/article-page"
+import { ListingPage } from "@/components/proposal/listing-page"
 import { MarketPage } from "@/components/proposal/market-page"
 import { stubTitles } from "@/content/navigation"
 import {
   articlePages,
   implementedPaths,
+  listingPages,
   marketPages,
   pageMeta,
 } from "@/content/pages"
@@ -52,6 +54,9 @@ export default async function InnerPage({ params }: PageProps) {
 
   const article = articlePages[path]
   if (article) return <ArticlePage page={article} />
+
+  const listing = listingPages[path]
+  if (listing) return <ListingPage page={listing} />
 
   const title = stubTitles[path]
   if (!title) notFound()
