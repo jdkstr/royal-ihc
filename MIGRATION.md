@@ -9,7 +9,7 @@ Standing PR: `dev` → `main`
 ## Last run
 
 - **When:** 2026-08-19T22:38Z (cron worker)
-- **What:** Enabled GitHub Pages deploys from `dev`. Migrated `/dredging`, `/dredging/what-is-dredging`, and `/dredging/dredging-vessels` from the live site into proposal chrome. Added typed `MarketPage` / `ArticlePage` modules so later markets reuse the same layout. Linked dredging children that are not yet migrated as stubs. First `dev` Pages **build succeeded**; **deploy failed** because environment `github-pages` only allows `main`. Workflow now uses a per-branch environment (`pages-dev` / `pages-main`) so `dev` can publish. The API cannot add `dev` to the `github-pages` branch policy (403).
+- **What:** Enabled GitHub Pages deploys from `dev`. Migrated `/dredging`, `/dredging/what-is-dredging`, and `/dredging/dredging-vessels` from the live site into proposal chrome. Added typed `MarketPage` / `ArticlePage` modules so later markets reuse the same layout. Linked dredging children that are not yet migrated as stubs. First `dev` Pages **build succeeded**; **deploy failed** because environment `github-pages` only allows `main`. Workflow now uses a per-branch environment (`pages-dev` / `pages-main`). Follow-up `dev` deploy **succeeded** (Actions run 32310389574). `/dredging` is live on Pages. Could not open the standing `dev` → `main` pull request from this run (GitHub PR create is not available to the worker token). Reuse or create that PR next run if it is still missing.
 - **Skipped implementation?** No. Latest `dev`/`main` commit was ~8 minutes old but Pages CI on `main` had already succeeded; no in-flight `dev` workflow; no open agent PRs; migration not marked complete.
 
 ## GitHub Pages
@@ -17,6 +17,7 @@ Standing PR: `dev` → `main`
 - Workflow: `.github/workflows/pages.yml`
 - Triggers: push to `main` **and** `dev`, plus `workflow_dispatch`
 - `GITHUB_PAGES=true` / `basePath` `/royal-ihc` unchanged
+- Deploy job uses environment `pages-${{ github.ref_name }}` because the default `github-pages` environment only allows `main`
 - In-progress work should appear at https://jdkstr.github.io/royal-ihc/ after the `dev` deploy finishes
 
 ## Done (real pages, not stubs)
