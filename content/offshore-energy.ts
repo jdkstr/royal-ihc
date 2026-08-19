@@ -169,3 +169,107 @@ export const pipelayingSapura: ArticlePageContent = {
   ],
   close,
 }
+
+export const offshoreVessels: ArticlePageContent = {
+  path: "/offshore-energy/offshore-vessels",
+  title: "Offshore vessels",
+  description:
+    "Integrated offshore vessels from concept design to delivery — with fit-for-purpose mission equipment, crew training and life-cycle support.",
+  kicker: "IHC Offshore Energy",
+  headline: "Offshore vessels",
+  intro:
+    "We offer a complete in-house package, from concept design to the delivery of integrated offshore vessels — including after-sales contracts, crew training and life-cycle support.",
+  image: assets.sapura,
+  sections: [
+    {
+      title: "An integrated design philosophy",
+      paragraphs: [
+        "Based on our offshore vessel design philosophy, we provide designs that seamlessly integrate fit-for-purpose mission equipment while ensuring maximum safety, performance and reliability.",
+        "Creating the optimal solution starts with your project requirements, and runs from concept design through construction to a vessel in service with the support to keep it there.",
+      ],
+    },
+    {
+      title: "Built for the transition",
+      paragraphs: [
+        "As wind farms move further out to sea and into deeper water, we design new, low-emission vessels — from dedicated cable lay vessels for floating wind to adaptable, multi-role offshore support vessels.",
+      ],
+    },
+  ],
+  links: [
+    { label: "Offshore equipment", href: "/offshore-energy/offshore-equipment" },
+    { label: "Pipelaying vessels for Sapura", href: "/offshore-energy/offshore-cases/pipelaying-vessels-sapura" },
+  ],
+  close,
+}
+
+export const offshoreEquipment: ArticlePageContent = {
+  path: "/offshore-energy/offshore-equipment",
+  title: "Offshore equipment",
+  description:
+    "Cable and pipe lay systems, subsea ploughs and trenchers, LARS, tensioners, winches, riser pull-in and mooring systems — for sale or rental.",
+  kicker: "IHC Offshore Energy",
+  headline: "Offshore equipment for efficient operations",
+  intro:
+    "We deliver advanced offshore equipment that provides a commercial and technical advantage — from fully integrated vessel systems to the rapid supply of subsystems. Our track record spans pipe and cable lay equipment, subsea vehicles, FPSO equipment and integrated vessels.",
+  image: assets.offshoreWind,
+  cards: [
+    { title: "Cable lay systems", text: "A complete range of power cable installation equipment, plus a modular cable lay spread for rapid mobilisation and multi-vessel compatibility.", href: "/offshore-energy/offshore-equipment" },
+    { title: "Subsea ploughs & trenchers", text: "Reduce project cost and product risk during the installation and burial of subsea power and fibre-optic cables.", href: "/offshore-energy/offshore-equipment" },
+    { title: "Pipe lay systems", text: "Sophisticated flex lay, J-lay, reel lay and S-lay systems with a proven track record, tailored to your requirements.", href: "/offshore-energy/offshore-equipment" },
+    { title: "LARS", text: "Launch and recovery systems — A-frame power cable lay, gantry, trencher and submarine-rescue-vehicle LARS for fast, safe operations.", href: "/offshore-energy/offshore-equipment" },
+    { title: "Tensioners & winches", text: "Tensioners for flexible and rigid pipe- or cable-laying, plus bespoke winches able to withstand harsh environments.", href: "/offshore-energy/offshore-equipment" },
+    { title: "Riser & mooring systems", text: "Riser pull-in systems and integrated tandem mooring and offloading systems for FPSO, FSO and FLNG units.", href: "/offshore-energy/offshore-equipment" },
+  ],
+  sections: [
+    {
+      title: "For sale or rental",
+      paragraphs: [
+        "To give clients flexibility, we offer equipment for sale and for rental. Our offshore rental services range from short- to long-term and feature modular, flexible cable lay equipment — quadrants, linear cable engines, tracked tensioners and winches — maintained by a dedicated team of offshore operators and engineers.",
+      ],
+    },
+    {
+      title: "Supported by our facilities",
+      paragraphs: [
+        "Our production centres in Kinderdijk and the Port of Blyth are equipped with the latest technology and staffed by skilled professionals, so we can serve customers with precision and reliability.",
+      ],
+    },
+  ],
+  links: [
+    { label: "Offshore vessels", href: "/offshore-energy/offshore-vessels" },
+    { label: "Offshore services", href: "/offshore-energy/offshore-services" },
+  ],
+  close,
+}
+
+export const offshoreServices: ArticlePageContent = {
+  path: "/offshore-energy/offshore-services",
+  title: "Offshore services",
+  description:
+    "Life-cycle offshore services — vessel design, installation and commissioning, spare parts, refurbishment, storage, training and 24/7 remote support.",
+  kicker: "IHC Offshore Energy",
+  headline: "Offshore services",
+  intro:
+    "We offer a comprehensive range of services to keep offshore operations running — from vessel design and commissioning to spare parts, refurbishment, training and remote support available around the clock.",
+  image: assets.offshoreWind,
+  cards: [
+    { title: "Rental equipment", text: "A variety of rental equipment suited to your needs and available globally.", href: "/offshore-energy/offshore-services" },
+    { title: "Vessel design", text: "Integrated and custom vessel-design services tailored to specific needs.", href: "/offshore-energy/offshore-services" },
+    { title: "Installation & commissioning", text: "Installation and testing for the safe mobilisation and commissioning of equipment ready for operation.", href: "/offshore-energy/offshore-services" },
+    { title: "Spare parts", text: "The parts you need, where you need them, to ensure maximum operational time.", href: "/offshore-energy/offshore-services" },
+    { title: "Upgrade & refurbish", text: "Extend equipment life expectancy through upgrades and refurbishment.", href: "/offshore-energy/offshore-services" },
+    { title: "Training & field services", text: "Standardised or tailored training courses, field services, and remote services for faster support.", href: "/offshore-energy/offshore-services" },
+  ],
+  sections: [
+    {
+      title: "Support you can rely on",
+      paragraphs: [
+        "From storage and preservation plans that keep remobilisation smooth, to field and remote services for quicker solutions, our offshore services keep your equipment ready and your operations moving. The comfort of knowing support is always available.",
+      ],
+    },
+  ],
+  links: [
+    { label: "Offshore vessels", href: "/offshore-energy/offshore-vessels" },
+    { label: "Offshore equipment", href: "/offshore-energy/offshore-equipment" },
+  ],
+  close,
+}

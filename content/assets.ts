@@ -10,4 +10,5 @@ export const assets = {
   sapura: `${FILES}/images/sap%20diamante_0.jpg`,
   careers: `${FILES}/images/Werken%20bij%20Royal%20IHC%20teamwork%20richting%20wijzen_0.jpg`,
   contactCta: `${FILES}/images/Corporate/Web%20header%20Corporate%20B.jpg`,
+  corporate: `${FILES}/images/Background%20Covers-02.jpg`,
 } as const;
