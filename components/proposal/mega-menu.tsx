@@ -45,6 +45,11 @@ export const resources = [
     href: "/careers",
     text: "Work in multidisciplinary project teams.",
   },
+  {
+    title: "Design system",
+    href: "/design-system",
+    text: "Tokens, type, and components for the proposal.",
+  },
 ] as const
 
 function MegaItem({

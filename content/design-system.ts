@@ -1,0 +1,162 @@
+export const designSystem = {
+  name: "IHC System",
+  summary:
+    "The proposal design system: a light product canvas, Geist Sans, and IHC red as the only accent. Hardware is framed as software.",
+  principles: [
+    {
+      title: "Product first",
+      text: "The vessel is the product. Show it in a console, not a full-bleed film. Specs are interactive, not captions.",
+    },
+    {
+      title: "One accent",
+      text: "IHC red is primary, hover, and focus. Neutrals carry structure. No extra brand colours.",
+    },
+    {
+      title: "Tight type",
+      text: "Geist, medium weight on headings, negative tracking. Body stays 15px / 7 leading.",
+    },
+    {
+      title: "Quiet chrome",
+      text: "14px header, muted hover pills, 4px radius. Shadows only on floating surfaces (menus, hover cards).",
+    },
+  ],
+  sections: [
+    { id: "principles", label: "Principles" },
+    { id: "color", label: "Color" },
+    { id: "type", label: "Type" },
+    { id: "layout", label: "Layout" },
+    { id: "components", label: "Components" },
+    { id: "patterns", label: "Patterns" },
+  ],
+  colors: [
+    {
+      name: "IHC red",
+      token: "--brand-red / --primary",
+      hex: "#e1001a",
+      className: "bg-primary",
+      invert: true,
+      use: "Buttons, links, focus ring",
+    },
+    {
+      name: "Pressed red",
+      token: "--brand-red-dark",
+      hex: "#7b000e",
+      className: "bg-brand-red-dark",
+      invert: true,
+      use: "Pressed / hover mix",
+    },
+    {
+      name: "Logo red",
+      token: "--brand-red-logo",
+      hex: "#e20714",
+      className: "bg-[#e20714]",
+      invert: true,
+      use: "Wordmark fill only",
+    },
+    {
+      name: "Foreground",
+      token: "--foreground",
+      hex: "#000000",
+      className: "bg-foreground",
+      invert: true,
+      use: "Headings, body",
+    },
+    {
+      name: "Neutral 900",
+      token: "--neutral-900",
+      hex: "#313131",
+      className: "bg-neutral-900",
+      invert: true,
+      use: "Rare dark text",
+    },
+    {
+      name: "Neutral 700",
+      token: "--neutral-700 / --muted-foreground",
+      hex: "#616161",
+      className: "bg-neutral-700",
+      invert: true,
+      use: "Supporting copy",
+    },
+    {
+      name: "Neutral 500",
+      token: "--neutral-500",
+      hex: "#919191",
+      className: "bg-neutral-500",
+      invert: true,
+      use: "Meta, dates, labels",
+    },
+    {
+      name: "Neutral 300",
+      token: "--neutral-300 / --border",
+      hex: "#c2c2c2",
+      className: "bg-neutral-300",
+      invert: false,
+      use: "Borders, inputs",
+    },
+    {
+      name: "Neutral 100",
+      token: "--neutral-100 / --muted",
+      hex: "#f2f2f2",
+      className: "bg-neutral-100",
+      invert: false,
+      use: "Bands, hover pills, chrome",
+    },
+    {
+      name: "Background",
+      token: "--background",
+      hex: "#ffffff",
+      className: "bg-white ring-1 ring-border",
+      invert: false,
+      use: "Page, cards, popovers",
+    },
+  ],
+  type: [
+    {
+      name: "Display",
+      sample: "The system for building and operating maritime assets.",
+      spec: "Geist medium · 2.35–3.35rem · leading 1.08 · tracking −0.032em",
+      className:
+        "text-[2.35rem] font-medium leading-[1.08] min-[800px]:text-5xl",
+    },
+    {
+      name: "Title",
+      sample: "Dredging, as a system",
+      spec: "Geist medium · 1.875–2.25rem",
+      className: "text-3xl font-medium min-[800px]:text-4xl",
+    },
+    {
+      name: "Quote",
+      sample:
+        "The largest and most powerful cutter suction dredger in the world.",
+      spec: "Geist medium · 1.25–1.35rem · leading snug",
+      className: "text-xl font-medium leading-snug min-[800px]:text-[1.35rem]",
+    },
+    {
+      name: "Body",
+      sample:
+        "Vessels, equipment and services for dredging, offshore energy, mining and defence.",
+      spec: "Geist regular · 15px · leading 1.75 · tracking −0.011em",
+      className: "text-[15px] leading-7 text-neutral-700",
+    },
+    {
+      name: "UI",
+      sample: "Product  ·  My IHC  ·  Contact",
+      spec: "Geist medium · 13px",
+      className: "text-[13px] font-medium",
+    },
+    {
+      name: "Meta",
+      sample: "Aug 2026  ·  Used on programmes with",
+      spec: "Geist medium · 11–12px · neutral-500",
+      className: "text-xs font-medium text-neutral-500",
+    },
+  ],
+  space: [
+    { name: "Page width", spec: "90% · max 1340px", token: "container-site" },
+    { name: "Header", spec: "56px", token: "h-14" },
+    { name: "Section", spec: "80–112px vertical", token: "py-20 / py-28" },
+    { name: "Radius (proposal)", spec: "4px", token: ".proposal --radius" },
+    { name: "Radius (parity)", spec: "8px", token: ":root --radius" },
+    { name: "Motion", spec: "cubic-bezier(0.22, 0.61, 0.36, 1)", token: "--ease-ihc" },
+  ],
+} as const

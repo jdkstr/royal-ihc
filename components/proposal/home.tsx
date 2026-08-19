@@ -43,7 +43,7 @@ export function ProposalHome() {
               </Link>
             </div>
           </div>
-          <ProductCanvas />
+          <ProductCanvas priority />
         </Container>
       </section>
 

@@ -80,9 +80,14 @@ export function ProposalFooter() {
         </div>
         <div className="mt-10 flex flex-col gap-3 border-t pt-5 text-sm text-neutral-500 min-[800px]:flex-row min-[800px]:items-center min-[800px]:justify-between">
           <p>© 2026 Royal IHC</p>
-          <Link href="/parity" className="hover:text-primary">
-            View current website
-          </Link>
+          <div className="flex flex-wrap gap-x-6 gap-y-2">
+            <Link href="/design-system" className="hover:text-primary">
+              Design system
+            </Link>
+            <Link href="/parity" className="hover:text-primary">
+              View current website
+            </Link>
+          </div>
         </div>
       </Container>
     </footer>
