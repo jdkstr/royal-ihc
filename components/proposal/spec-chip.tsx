@@ -5,13 +5,9 @@ import {
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
+import type { SpecChipData } from "@/content/types"
 
-export type SpecChipData = {
-  label: string
-  value: string
-  title: string
-  text: string
-}
+export type { SpecChipData }
 
 export function SpecChip({ spec }: { spec: SpecChipData }) {
   return (

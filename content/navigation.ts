@@ -59,9 +59,9 @@ export const hamburgerNav: NavLink[] = [
         label: "IHC Dredging",
         href: "/dredging",
         children: [
-          { label: "Vessels", href: "/dredging" },
-          { label: "Equipment", href: "/dredging" },
-          { label: "Services", href: "/dredging" },
+          { label: "Vessels", href: "/dredging/dredging-vessels" },
+          { label: "Equipment", href: "/dredging/dredging-equipment" },
+          { label: "Services", href: "/dredging/dredging-services" },
         ],
       },
       { label: "IHC Offshore Energy", href: "/offshore-energy" },
@@ -77,7 +77,6 @@ export const hamburgerNav: NavLink[] = [
 ]
 
 export const stubTitles: Record<string, string> = {
-  "/dredging": "IHC Dredging",
   "/offshore-energy": "IHC Offshore Energy",
   "/mining": "IHC Mining",
   "/defence": "IHC Defence",
@@ -98,8 +97,32 @@ export const stubTitles: Record<string, string> = {
   "/search": "Search",
   "/privacy-policy": "Privacy policy",
   "/disclaimer": "Disclaimer",
+  "/dredging/dredging-equipment": "Dredging equipment",
+  "/dredging/dredging-services": "Dredging services",
+  "/dredging/dredging-cases": "Dredging cases",
+  "/dredging/dredging-challenges": "Dredging challenges",
+  "/dredging/dredging-challenges/economic-development-and-trade":
+    "Economic development and trade",
+  "/dredging/dredging-challenges/climate-change-flooding-and-drought":
+    "Climate change, flooding and drought",
+  "/dredging/challenges/data-heart-digital-transformation":
+    "Data at the heart of digital transformation",
+  "/dredging/dredging-innovations": "Dredging innovations",
+  "/dredging/history-dredging": "History of dredging",
+  "/dredging/project-types": "Project types",
   "/dredging/dredging-cases/worlds-most-powerful-cutter-suction-dredger":
     "World’s most powerful cutter suction dredger",
+  "/dredging/dredging-vessels/cutter-suction-dredgers": "Cutter suction dredgers",
+  "/dredging/dredging-vessels/trailing-suction-hopper-dredgers":
+    "Trailing suction hopper dredgers",
+  "/dredging/dredging-vessels/split-hopper": "Split hopper",
+  "/dredging/dredging-vessels/grab-hopper-dredgers": "Grab hopper dredgers",
+  "/dredging/dredging-vessels/additional-equipment": "Additional equipment",
+  "/dredging/dredging-equipment/integrated-and-connected-automation":
+    "Integrated and connected automation",
   "/offshore-energy/offshore-cases/pipelaying-vessels-sapura":
     "Pipelaying vessels for Sapura",
+  "/offshore-energy/offshore-vessels": "Offshore vessels",
+  "/offshore-energy/offshore-equipment": "Offshore equipment",
+  "/offshore-energy/offshore-services": "Offshore services",
 }

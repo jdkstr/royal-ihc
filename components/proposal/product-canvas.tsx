@@ -3,9 +3,16 @@ import Link from "next/link"
 
 import { SpecChip } from "@/components/proposal/spec-chip"
 import { redesignHome } from "@/content/redesign"
+import type { ProductCanvasData } from "@/content/types"
 
-export function ProductCanvas({ priority = false }: { priority?: boolean }) {
-  const { canvas } = redesignHome
+export function ProductCanvas({
+  data = redesignHome.canvas,
+  priority = false,
+}: {
+  data?: ProductCanvasData
+  priority?: boolean
+}) {
+  const canvas = data
 
   return (
     <div className="overflow-hidden rounded-md border bg-white">

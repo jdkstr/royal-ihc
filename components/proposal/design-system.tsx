@@ -240,6 +240,28 @@ export function DesignSystemPage() {
         <div className="space-y-16">
           <div>
             <p className="mb-3 text-xs font-medium text-neutral-500">
+              Market page
+            </p>
+            <p className="mb-4 max-w-lg text-[15px] leading-7 text-neutral-700">
+              Inner market hubs reuse homepage chrome: canvas, offering
+              columns, quote-scale challenges, changelog, close band. Copy
+              lives in{" "}
+              <code className="text-[13px] text-neutral-700">
+                content/dredging.ts
+              </code>
+              . First live page:{" "}
+              <Link
+                href="/dredging"
+                className="font-medium text-primary hover:underline"
+              >
+                /dredging
+              </Link>
+              .
+            </p>
+          </div>
+
+          <div>
+            <p className="mb-3 text-xs font-medium text-neutral-500">
               Market row
             </p>
             <div className="grid items-center gap-10 min-[900px]:grid-cols-2 min-[900px]:gap-16">
